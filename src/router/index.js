@@ -64,7 +64,6 @@ import RotateFoldLeftToRight from 'pages/rotate/fold/LeftToRight'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     { path: '*', component: Page404 },
     { path: '/', redirect: '/moveBottomToTop' },
