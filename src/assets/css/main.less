@@ -1,0 +1,70 @@
+@position-width: 200px;
+@position-height: 40px;
+
+/* 统一样式*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  font-weight: 400;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**************** 工具类样式 *****************/
+/* 水平flex布局 */
+.hfq-cell {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.hfq-cell-primary {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.hfq-cell-ft {
+  text-align: right;
+}
+
+// 背景色
+.bg-0 {
+  // background-color: #fdc162;
+  background: url('../img/bg_0.jpg') no-repeat center center;
+}
+.bg-1 {
+  // background-color: #fd6a62;
+  background: url('../img/bg_1.jpg') no-repeat center center;
+}
+.bg-2 {
+  // background-color: #f68dbb;
+  background: url('../img/bg_2.jpg') no-repeat center center;
+}
+.bg-3 {
+  // background-color: #0ac2d2;
+  background: url('../img/bg_3.jpg') no-repeat center center;
+}
+.bg-4 {
+  // background-color: #7bb7fa;
+  background: url('../img/bg_4.jpg') no-repeat center center;
+}
+.bg-5 {
+  // background-color: #60d7a9;
+  background: url('../img/bg_5.jpg') no-repeat center center;
+}
