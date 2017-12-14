@@ -67,7 +67,7 @@ export default new Router({
   mode: 'history',
   routes: [
     { path: '*', component: Page404 },
-    { path: '/', redirect: '/bottomToTop' },
+    { path: '/', redirect: '/moveBottomToTop' },
     // move
     {
       path: '/moveBottomToTop',
