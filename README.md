@@ -9,7 +9,7 @@ _vue-transition动画库_
 ### npm 安装
 
 ```
-npm install vue-transition.css
+npm install vue-transition.css --save
 ```
 
 ### CDN 可以通过下载[vue-transition.min.css](https://raw.githubusercontent.com/WebCodeFarmer/vue-transition.css/master/transition.min.css),在页面上引入 css 文件即可开始使用。
