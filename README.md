@@ -66,7 +66,7 @@ npm install vue-transition.css --save
 
 [查看所有动画](https://webcodefarmer.github.io/vue-transition.css/dist/index.html)
 
-欢迎留言或star,如果对demo中的美女不满意，可以加为qq（1024371442）私聊:smile:
+欢迎留言或star,如果对demo中的美女不满意，可以加qq（1024371442）私聊:smile:
 
 # License
 
