@@ -8,7 +8,7 @@
     "animation",
     " vue-router"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "hfq-pengyuanyuan <pengyuanyuan@huizhaofang.com>",
   "license": "MIT",
   "private": false,
