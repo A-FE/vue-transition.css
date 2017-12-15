@@ -79,7 +79,7 @@
 </template>
 
 <script>
-  import 'page-transition.css'
+  import 'vue-transition.css'
   export default {
     name: 'app',
     data() {
