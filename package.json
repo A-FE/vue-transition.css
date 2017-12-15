@@ -1,20 +1,28 @@
 {
   "name": "vue-transition.css",
   "description": "a animation library of vue-transition",
-  "keywords": ["vue-transition", "animation", "css", "page-transition"],
+  "keywords": [
+    "vue-transition",
+    "animation",
+    "css",
+    "page-transition"
+  ],
   "version": "1.0.2",
   "author": "hfq-pengyuanyuan <pengyuanyuan@huizhaofang.com>",
   "license": "MIT",
   "private": false,
   "main": "transition.min.css",
   "scripts": {
-    "css":
-      "postcss ./src/transition.css --use autoprefixer --use cssnano --no-map -o transition.min.css",
+    "css": "postcss ./src/transition.css --use autoprefixer --use cssnano --no-map -o transition.min.css",
     "prestart": "npm update",
     "start": "npm run css"
   },
   "dependencies": {},
-  "browserslist": ["> 1%", "last 4 versions", "not ie <= 8"],
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "not ie <= 8"
+  ],
   "devDependencies": {
     "autoprefixer": "^7.2.3",
     "cssnano": "^3.10.0",

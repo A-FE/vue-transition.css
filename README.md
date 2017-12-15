@@ -22,10 +22,46 @@ npm install vue-transition.css
 ## 使用
 
 ```
-// 例如使用 move-right-to-left 动画
- <transition name="move-right-to-left">
+// 入口页,如app.vue
+<template>
+  <div class="app">
+    ...
+    // 例如使用 move-right-to-left 动画
+    <transition name="move-right-to-left">
       <router-view class="app-router-view"></router-view>
-</transition>
+    </transition>
+    ...
+  </div>
+</template>
+
+<style>
+  // 给页面加上以下样式，动画才能生效
+  html,
+  body,
+  .app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .app {
+    background-color: #000;
+    perspective: 1200px;
+  }
+
+  .app .app-router-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    transform-style: preserve-3d;
+    visibility: visible;
+  }
+</style>
 ```
 
 [查看所有动画](https://webcodefarmer.github.io/vue-transition.css/dist/index.html)
