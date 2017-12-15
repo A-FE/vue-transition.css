@@ -1,8 +1,8 @@
 {
-  "name": "page-transition.css",
-  "description": "vue transition ",
-  "keywords": ["css", "vue", "transition", "animation", " vue-router"],
-  "version": "1.0.1",
+  "name": "vue-transition.css",
+  "description": "a animation library of vue-transition",
+  "keywords": ["vue-transition", "animation", "css", "page-transition"],
+  "version": "1.0.2",
   "author": "hfq-pengyuanyuan <pengyuanyuan@huizhaofang.com>",
   "license": "MIT",
   "private": false,
