@@ -1,29 +1,20 @@
 {
   "name": "page-transition.css",
   "description": "vue transition ",
-  "keywords": [
-    "css",
-    "vue",
-    "transition",
-    "animation",
-    " vue-router"
-  ],
+  "keywords": ["css", "vue", "transition", "animation", " vue-router"],
   "version": "1.0.1",
   "author": "hfq-pengyuanyuan <pengyuanyuan@huizhaofang.com>",
   "license": "MIT",
   "private": false,
-  "main": "main.css",
+  "main": "transition.min.css",
   "scripts": {
-    "css": "postcss ./src/transition.css --use autoprefixer --use cssnano --no-map -o main.css",
+    "css":
+      "postcss ./src/transition.css --use autoprefixer --use cssnano --no-map -o transition.min.css",
     "prestart": "npm update",
     "start": "npm run css"
   },
   "dependencies": {},
-  "browserslist": [
-    "> 1%",
-    "last 4 versions",
-    "not ie <= 8"
-  ],
+  "browserslist": ["> 1%", "last 4 versions", "not ie <= 8"],
   "devDependencies": {
     "autoprefixer": "^7.2.3",
     "cssnano": "^3.10.0",
