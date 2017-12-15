@@ -172,8 +172,17 @@
       margin-bottom: 8px;
       margin-right: 8px;
       cursor: pointer;
+      background: #fff;
+      border: 1px solid #dcdfe6;
+      color: #606266;
+      transition: all 0.2s ease-in-out;
       & + .el-tag {
         margin-left: 0;
+      }
+      &:hover {
+        background-color: rgba(64, 158, 255, 0.1);
+        color: #409eff;
+        border: 1px solid rgba(64, 158, 255, 0.2);
       }
     }
   }
