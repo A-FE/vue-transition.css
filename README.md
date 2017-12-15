@@ -34,6 +34,12 @@ npm install vue-transition.css --save
   </div>
 </template>
 
+<script>
+  // 引入vue-transition.css
+  import 'vue-transition.css'
+  ...
+</script>
+
 <style>
   // 给页面加上以下样式，动画才能生效
   html,
