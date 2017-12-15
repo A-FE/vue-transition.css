@@ -12,6 +12,8 @@
     "release": ""
   },
   "dependencies": {
+    "@types/vue": "^2.0.0",
+    "@types/vue-router": "^2.0.0",
     "element-ui": "^2.0.8",
     "vue": "^2.5.10",
     "vue-router": "^2.8.1",

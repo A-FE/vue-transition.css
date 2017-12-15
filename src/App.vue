@@ -1,73 +1,76 @@
 <template>
   <div class="app">
+    <a href="https://github.com/WebCodeFarmer/vue-transition.css" class="github">
+      <img src="./assets/img/github.svg" width="32px" title="欢迎star">
+    </a>
     <!-- 页面标题 -->
     <el-tabs type="border-card" class="m-tabs">
 
       <el-tab-pane label="move">
-        <el-button size="mini" @click="handleChangeRoute('/moveRightToLeft')">move-right-to-left</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveLeftToRight')">move-left-to-right</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveTopToBottom')">move-top-to-bottom</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveBottomToTop')">move-bottom-to-top</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveRightToLeft')">move-right-to-left</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveLeftToRight')">move-left-to-right</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveTopToBottom')">move-top-to-bottom</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveBottomToTop')">move-bottom-to-top</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="moveFade">
-        <el-button size="mini" @click="handleChangeRoute('/moveFadeRightToLeft')">{{transformClassName('moveFadeRightToLeft')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveFadeLeftToRight')">{{transformClassName('moveFadeLeftToRight')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveFadeTopToBottom')">{{transformClassName('moveFadeTopToBottom')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveFadeBottomToTop')">{{transformClassName('moveFadeBottomToTop')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveFadeRightToLeft')">{{transformClassName('moveFadeRightToLeft')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveFadeLeftToRight')">{{transformClassName('moveFadeLeftToRight')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveFadeTopToBottom')">{{transformClassName('moveFadeTopToBottom')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveFadeBottomToTop')">{{transformClassName('moveFadeBottomToTop')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="moveDifferent">
-        <el-button size="mini" @click="handleChangeRoute('/moveDifferentRightToLeft')">{{transformClassName('moveDifferentRightToLeft')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveDifferentLeftToRight')">{{transformClassName('moveDifferentLeftToRight')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveDifferentTopToBottom')">{{transformClassName('moveDifferentTopToBottom')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/moveDifferentBottomToTop')">{{transformClassName('moveDifferentBottomToTop')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveDifferentRightToLeft')">{{transformClassName('moveDifferentRightToLeft')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveDifferentLeftToRight')">{{transformClassName('moveDifferentLeftToRight')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveDifferentTopToBottom')">{{transformClassName('moveDifferentTopToBottom')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/moveDifferentBottomToTop')">{{transformClassName('moveDifferentBottomToTop')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="sacle">
-        <el-button size="mini" @click="handleChangeRoute('/scaleDownToDown')">{{transformClassName('scaleDownToDown')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/scaleDownToUp')">{{transformClassName('scaleDownToUp')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/scaleUpToUp')">{{transformClassName('scaleUpToUp')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/scaleDownToDown')">{{transformClassName('scaleDownToDown')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/scaleDownToUp')">{{transformClassName('scaleDownToUp')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/scaleUpToUp')">{{transformClassName('scaleUpToUp')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="rotate">
-        <el-button size="mini" @click="handleChangeRoute('/rotateFall')">{{transformClassName('rotateFall')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateSides')">{{transformClassName('rotateSides')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFall')">{{transformClassName('rotateFall')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateSides')">{{transformClassName('rotateSides')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="glue">
-        <el-button size="mini" @click="handleChangeRoute('/rotateGlueBottomToTop')">{{transformClassName('rotateGlueBottomToTop')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateGlueTopToBottom')">{{transformClassName('rotateGlueTopToBottom')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateGlueRightToLeft')">{{transformClassName('rotateGlueRightToLeft')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateGlueLeftToRight')">{{transformClassName('rotateGlueLeftToRight')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateGlueBottomToTop')">{{transformClassName('rotateGlueBottomToTop')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateGlueTopToBottom')">{{transformClassName('rotateGlueTopToBottom')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateGlueRightToLeft')">{{transformClassName('rotateGlueRightToLeft')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateGlueLeftToRight')">{{transformClassName('rotateGlueLeftToRight')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="flip">
-        <el-button size="mini" @click="handleChangeRoute('/rotateFlipTop')">{{transformClassName('rotateFlipTop')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateFlipBottom')">{{transformClassName('rotateFlipBottom')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateFlipLeft')">{{transformClassName('rotateFlipLeft')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateFlipRight')">{{transformClassName('rotateFlipRight')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFlipTop')">{{transformClassName('rotateFlipTop')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFlipBottom')">{{transformClassName('rotateFlipBottom')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFlipLeft')">{{transformClassName('rotateFlipLeft')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFlipRight')">{{transformClassName('rotateFlipRight')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="carouse">
-        <el-button size="mini" @click="handleChangeRoute('/rotateCarouselTop')">{{transformClassName('rotateCarouselTop')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateCarouselBottom')">{{transformClassName('rotateCarouselBottom')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateCarouselLeft')">{{transformClassName('rotateCarouselLeft')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateCarouselRight')">{{transformClassName('rotateCarouselRight')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateCarouselTop')">{{transformClassName('rotateCarouselTop')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateCarouselBottom')">{{transformClassName('rotateCarouselBottom')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateCarouselLeft')">{{transformClassName('rotateCarouselLeft')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateCarouselRight')">{{transformClassName('rotateCarouselRight')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="push">
-        <el-button size="mini" @click="handleChangeRoute('/rotatePushBottomToTop')">{{transformClassName('rotatePushBottomToTop')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotatePushTopToBottom')">{{transformClassName('rotatePushTopToBottom')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotatePushRightToLeft')">{{transformClassName('rotatePushRightToLeft')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotatePushLeftToRight')">{{transformClassName('rotatePushLeftToRight')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotatePushBottomToTop')">{{transformClassName('rotatePushBottomToTop')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotatePushTopToBottom')">{{transformClassName('rotatePushTopToBottom')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotatePushRightToLeft')">{{transformClassName('rotatePushRightToLeft')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotatePushLeftToRight')">{{transformClassName('rotatePushLeftToRight')}}</el-tag>
       </el-tab-pane>
 
       <el-tab-pane label="fold">
-        <el-button size="mini" @click="handleChangeRoute('/rotateFoldBottomToTop')">{{transformClassName('rotateFoldBottomToTop')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateFoldTopToBottom')">{{transformClassName('rotateFoldTopToBottom')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateFoldRightToLeft')">{{transformClassName('rotateFoldRightToLeft')}}</el-button>
-        <el-button size="mini" @click="handleChangeRoute('/rotateFoldLeftToRight')">{{transformClassName('rotateFoldLeftToRight')}}</el-button>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFoldBottomToTop')">{{transformClassName('rotateFoldBottomToTop')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFoldTopToBottom')">{{transformClassName('rotateFoldTopToBottom')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFoldRightToLeft')">{{transformClassName('rotateFoldRightToLeft')}}</el-tag>
+        <el-tag size="medium" @click.native="handleChangeRoute('/rotateFoldLeftToRight')">{{transformClassName('rotateFoldLeftToRight')}}</el-tag>
       </el-tab-pane>
     </el-tabs>
 
@@ -162,12 +165,28 @@
     .el-tab-pane {
       font-size: 0;
     }
-    .el-button {
+    .el-tabs__item {
+      user-select: none;
+    }
+    .el-tag {
       margin-bottom: 8px;
       margin-right: 8px;
-      & + .el-button {
+      cursor: pointer;
+      & + .el-tag {
         margin-left: 0;
       }
+    }
+  }
+
+  .github {
+    position: fixed;
+    z-index: 1000;
+    top: 20px;
+    left: 20px;
+    opacity: 0.8;
+    transition: all 0.2s linear;
+    &:hover {
+      opacity: 1;
     }
   }
 </style>
