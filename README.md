@@ -16,7 +16,7 @@ npm install vue-transition.css --save
 
 ```
 <!-- 引入样式 -->
-<link rel="stylesheet" href="vue-transition.css">
+<link rel="stylesheet" href="vue-transition.min.css">
 ```
 
 ## 使用
