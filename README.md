@@ -1,6 +1,6 @@
 # vue-transition.css ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg) ![Github Release](https://img.shields.io/badge/release-v1.0.2-brightgreen.svg)
 
-_a animation library of vue-transition vue-transition 动画库_
+_a animation library of vue-transition_
 
 * [live demo](https://webcodefarmer.github.io/vue-transition.css/dist/index.html)
 
