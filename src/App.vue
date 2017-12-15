@@ -79,6 +79,7 @@
 </template>
 
 <script>
+  import 'page-transition.css'
   export default {
     name: 'app',
     data() {
@@ -121,7 +122,6 @@
 <style lang="less">
   /* 引入全局样式 */
   @import './assets/css/main.less';
-  @import './assets/css/transition.css';
   html,
   body,
   .app {
