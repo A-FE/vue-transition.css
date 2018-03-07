@@ -2,7 +2,7 @@
 
 _vue-transition动画库_
 
-* [在线demo](https://webcodefarmer.github.io/vue-transition.css/dist/index.html)
+* [在线demo](https://webcodefarmer.github.io/page-transition-demo/dist/index.html)
 
 ## 安装
 
