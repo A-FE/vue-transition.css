@@ -53,6 +53,7 @@
     "http-proxy-middleware": "^0.17.3",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
+    "offline-plugin": "^4.9.0",
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",

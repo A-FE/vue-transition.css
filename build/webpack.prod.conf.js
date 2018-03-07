@@ -8,6 +8,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var OfflinePlugin = require('offline-plugin')
 
 var env = config.build.env
 
@@ -46,6 +47,21 @@ var webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
+    new OfflinePlugin({
+      publicPath: '/',
+      cache: {
+        main: ['app.*.js', 'app.*.css', 'vender.*.js'],
+        additional: [':externals:'],
+        optional: [':rest:']
+      },
+      externals: ['/'],
+      ServiceWorker: { navigateFallbackURL: '/' },
+      AppCache: {
+        FALLBACK: {
+          '/': '/offline-page.html'
+        }
+      }
+    }),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
@@ -68,15 +84,9 @@ var webpackConfig = merge(baseWebpackConfig, {
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: function (module, count) {
+      minChunks: function(module, count) {
         // any required modules inside node_modules are extracted to vendor
-        return (
-          module.resource &&
-          /\.js$/.test(module.resource) &&
-          module.resource.indexOf(
-            path.join(__dirname, '../node_modules')
-          ) === 0
-        )
+        return module.resource && /\.js$/.test(module.resource) && module.resource.indexOf(path.join(__dirname, '../node_modules')) === 0
       }
     }),
     // extract webpack runtime and module manifest to its own file in order to
@@ -103,11 +113,7 @@ if (config.build.productionGzip) {
     new CompressionWebpackPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
-      test: new RegExp(
-        '\\.(' +
-        config.build.productionGzipExtensions.join('|') +
-        ')$'
-      ),
+      test: new RegExp('\\.(' + config.build.productionGzipExtensions.join('|') + ')$'),
       threshold: 10240,
       minRatio: 0.8
     })
