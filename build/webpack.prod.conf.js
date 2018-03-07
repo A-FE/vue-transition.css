@@ -1,3 +1,4 @@
+var fs = require('fs')
 var path = require('path')
 var utils = require('./utils')
 var webpack = require('webpack')
@@ -8,7 +9,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var OfflinePlugin = require('offline-plugin')
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+var loadMinified = require('./load-minified')
 
 var env = config.build.env
 
@@ -47,11 +49,6 @@ var webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
-    new OfflinePlugin({
-      publicPath: config.build.assetsPublicPath,
-      caches: 'all',
-      ServiceWorker: { navigateFallbackURL: '/' }
-    }),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
@@ -67,7 +64,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
+      chunksSortMode: 'dependency',
+      serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname, './service-worker-prod.js'))}</script>`
     }),
     // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
@@ -92,7 +90,15 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    // service worker caching
+    new SWPrecacheWebpackPlugin({
+      cacheId: 'pwa-template',
+      filename: 'service-worker.js',
+      staticFileGlobs: ['dist/**/*.{js,html,css}'],
+      minify: true,
+      stripPrefix: 'dist/'
+    })
   ]
 })
 

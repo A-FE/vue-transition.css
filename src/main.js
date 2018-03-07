@@ -7,9 +7,6 @@ Vue.component(Tabs.name, Tabs)
 Vue.component(TabPane.name, TabPane)
 Vue.component(Tag.name, Tag)
 
-import * as OfflinePluginRuntime from 'offline-plugin/runtime'
-OfflinePluginRuntime.install()
-
 Vue.config.productionTip = process.env.NODE_ENV !== 'production'
 /* eslint-disable no-new */
 new Vue({
