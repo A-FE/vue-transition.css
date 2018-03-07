@@ -48,13 +48,12 @@ var webpackConfig = merge(baseWebpackConfig, {
       }
     }),
     new OfflinePlugin({
-      publicPath: '/',
+      publicPath: config.build.assetsPublicPath,
       cache: {
         main: ['app.*.js', 'app.*.css', 'vender.*.js'],
         additional: [':externals:'],
         optional: [':rest:']
       },
-      externals: ['/'],
       ServiceWorker: { navigateFallbackURL: '/' },
       AppCache: {
         FALLBACK: {
