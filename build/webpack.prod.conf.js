@@ -95,8 +95,8 @@ var webpackConfig = merge(baseWebpackConfig, {
     new SWPrecacheWebpackPlugin({
       cacheId: 'pwa-template',
       filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css,jpg,jpeg,png,svg,ttf}'],
       minify: true,
+      staticFileGlobsIgnorePatterns: [/\.map$/],
       stripPrefix: 'dist/'
     })
   ]
