@@ -50,12 +50,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     new OfflinePlugin({
       publicPath: config.build.assetsPublicPath,
       caches: 'all',
-      ServiceWorker: { navigateFallbackURL: '/' },
-      AppCache: {
-        FALLBACK: {
-          '/': '/offline-page.html'
-        }
-      }
+      ServiceWorker: { navigateFallbackURL: '/' }
     }),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html

@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2018-3-7 14:34:51
+#ver:2018-3-7 14:40:45
 #plugin:4.9.0
 
 CACHE:
@@ -18,6 +18,3 @@ https://webcodefarmer.github.io/vue-transition.css/dist/static/css/app.53057d09f
 
 NETWORK:
 *
-
-FALLBACK:
-/ /offline-page.html
