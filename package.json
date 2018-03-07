@@ -26,6 +26,7 @@
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^7.1.1",
+    "babel-plugin-component": "^1.1.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.22.0",
@@ -76,5 +77,10 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 200
+  }
 }

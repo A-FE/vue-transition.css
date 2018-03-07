@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import { Tabs, TabPane, Tag } from 'element-ui'
 
-Vue.use(ElementUI)
+Vue.component(Tabs.name, Tabs)
+Vue.component(TabPane.name, TabPane)
+Vue.component(Tag.name, Tag)
 
 Vue.config.productionTip = process.env.NODE_ENV !== 'production'
 /* eslint-disable no-new */
