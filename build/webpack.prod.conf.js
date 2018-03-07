@@ -96,7 +96,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       cacheId: 'pwa-template',
       filename: 'service-worker.js',
       minify: true,
-      staticFileGlobsIgnorePatterns: [/\.map$/],
+      staticFileGlobsIgnorePatterns: [/\.map$/,/\.gz$/,],
       stripPrefix: 'dist/'
     })
   ]
